@@ -78,13 +78,50 @@ for m in midterm_score:
 """
 
 
+
+"""8번
+
 lifes = dict(dict());
 
 life = {"animal":[{"cats":[{"Kim":None},{"Lee":None},{"Choi":None}]},{"octopi":None},{"emus":None}],"plants":None,"other":None}
 
 print(life.get("animal")[0].get("cats")[0].get("Lee"))
 
-"""8번
+"""
 
 
 """
+1번. 답 : [3,1,7,5]
+
+2번. 답 : (가) 스택 (나) 큐 (다) 튜플 (라) 세트
+
+3번. 답 :  False (실수형과 문자열은 다르다)
+
+4번. 답 : 1번
+
+5번. 답 : 1번
+
+6번. 답 : 4
+
+7번. 답 : 3
+
+8번. 10
+
+9번. [0,1,2,3,4,5,6,7,8,9]
+"""
+
+
+"""
+10번
+(1,)
+[1]
+error
+
+error
+a
+a
+"""
+
+
+
+

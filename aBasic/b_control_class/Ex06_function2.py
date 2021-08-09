@@ -9,12 +9,34 @@ def case2():
 def case3():
     print('case-3')
 
-
-
+"""
+f = { 'a1':case1, 'a2':case2, 'a3':case3}
+print(f['a1']())
+"""
 #---------------------------------------
 # 글로벌 변수와 지역변수
 
+# (1)
+"""
+temp = '글로벌'
+def func():
+    print("1>",temp)
 
+func()
+print('2>',temp)
+"""
+
+# (2)
+temp ="글로벌"
+print(id(temp))
+def func():
+    global temp
+    temp = "지역"
+    print(id(temp))
+    print("1>",temp)
+
+func()
+print('2>',temp)
 
 '''
 #----------------------------------------------
@@ -26,7 +48,13 @@ def case3():
     
     종종 사용됨
 '''
+def f(x,y):
+    return x+y
+print(f(3,2))
 
+# 람다함수
+f = lambda x,y : x+y
+print(f(3,2))
 
 
 #-----------------------------------------------------------
@@ -41,7 +69,31 @@ def case3():
     
     파이썬 2.x에서는 많이 사용하던 함수이지만, 최근 문법의 복잡성으로 권장하지 않는 추세란다.
 """
+"""def calc(x):
+    return x*2"""
+# 람다식으로
+calc = lambda x : x*2
 
+data = [1,2,3,4,5]
+for i in data:
+    calc(i)
+
+result = list(map(calc,data))
+print(result)
+
+print(list(map(lambda x : x*2,[1,2,3,4,5])))
+
+from functools import reduce
+
+def f(x,y):
+    return x*y
+
+print(reduce(f,data))
+
+x = 9
+if x == 9:
+    global cal
+    cal = lambda
 
 
 
